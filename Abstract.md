@@ -12,7 +12,7 @@ output: pdf_document
 
 ##Abstract
 
-We all like to get our work published and cited. Recently there has been an increasing realisation that for our work to have maximum impact, the findings must be replicated, and possibly expanded, by others. Technological advances in all areas of the life sciences have to led to a data explosion and require increasingly complex data analyses techniques. It can quickly become a nightmare for a single researcher to keep track of all the stages of their analysis workflow; let alone expect a researcher from another institute to repeat the same analysis several months or years down the line. In this masterclass, we will discuss how leading journals are becoming increasingly stringent in their quest for transparency and reproducibility, and give examples of how we have suceeded (and in some cases failed!) to rise to these challenges.
+Recently there has been an increasing realisation that for our publications to have maximum impact, the findings must be replicated, and possibly expanded, by others. Technological advances in all areas of the life sciences have to led to a data explosion and require increasingly complex data analyses techniques. It can quickly become a nightmare for a single researcher to keep track of all the stages of their analysis workflow; let alone expect a researcher from another institute to repeat the same analysis several months or years down the line. In this masterclass, we will discuss how leading journals are becoming increasingly stringent in their quest for transparency and reproducibility, and give examples of how we have suceeded (and in some cases failed!) to rise to these challenges.
 
 ##Speakers
 
