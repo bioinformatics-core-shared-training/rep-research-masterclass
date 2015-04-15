@@ -6,7 +6,7 @@ output: pdf_document
 
 ##Abstract
 
-Technological advances in all areas of life sciences have to led to a data explosion and require increasingly complex data analyses techniques. It can quickly become a nightmare for a single researcher to keep track of all the stages of their analysis pipeline without adequate documentation; let alone a researcher from another institute trying to repeat the same analysis and reach the same conclusions. In this masterclass, we will discuss how leading journals are becoming increasingly stringent in their requirements for reproducible research and give examples of how we have suceeded (and in some cases failed!) to rise to these challenges.
+Technological advances in all areas of life sciences have to led to a data explosion and require increasingly complex data analyses techniques. It can quickly become a nightmare for a single researcher to keep track of all the stages of their analysis pipeline without adequate documentation; let alone a researcher from another institute trying to repeat the same analysis and reach the same conclusions. In this masterclass, we will discuss how leading journals are becoming increasingly stringent in their requirements for reproducibility and give examples of how we have suceeded (and in some cases failed!) to rise to these challenges.
 
 ##Speakers
 
