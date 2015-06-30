@@ -154,12 +154,17 @@ test:
     docker run -d -p 8787:8787 sje30/waverepo
 	open http://192.168.59.103:8787/
 
+Login with "rstudio" as username and password.  Open
+`waverepo/paper/waverepo_paper.Rnw` and hit the "Compile PDF" button.
+
+
 ## Live demo
 
 Anyone with docker installed on their laptop and want to try a live
-demo (apart from me?)
+demo (apart from me)?
 
-Easiest way is with https://kitematic.com/
+GUI available via https://kitematic.com/
+
 
 
 ## Lessons learnt
