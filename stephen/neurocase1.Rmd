@@ -1,8 +1,8 @@
 ---
 title: "Patterns of spontaneous activity in developing networks"
-subtitle: "A case study for CARMEN"
+subtitle: "A case study for RR in Neuroscience"
 author: Stephen J Eglen
-date: 2014-07-24
+date: 2015-07-08
 output:
   ioslides_presentation
 ---
@@ -96,6 +96,70 @@ h5ls -r ~/proj/carmen/waverepo/waverepo/hdf5/Wong1993/Wong1993_P0.h5
 
 <iframe src="http://damtp.cam.ac.uk/user/sje30/waverepo"></iframe>
 
+## Results
+
+Most tables and graphs in our report were automated and recomputed
+dynamically, e.g. every time the database extended.
+
+<iframe src="http://www.gigasciencejournal.com/content/3/1/3"></iframe>
+
+
+## Submitting the paper
+
+Provided all code and data online on our web page together with PDF.
+
+Cook for one month...
+
+## Reviews
+
+(Aside: reviews were signed and are now public).
+http://www.gigasciencejournal.com/content/3/1/3/prepub
+
+From: http://www.gigasciencejournal.com/manuscript/review/attachment/pdf/6813937211125312.pdf
+
+    I would use an ordinate log scale for this bottom right panel (as
+    done in Fig.  3). But since the authors gave me everything, I can
+    do it! by redefining fourplot as follows:
+
+
+## Post acceptance
+Journal were keen to see RR, so they wrote a press-release. Nature
+Neuroscience podcast a few weeks later.
+
+(Hint: contact http://www.communications.cam.ac.uk/)
+
+<iframe src="http://www.cam.ac.uk/research/news/from-mexican-wave-to-retinal-wave-why-sharing-data-is-good-for-science"></iframe>
+
+
+# What next
+
+## Journal policies are developing . . .
+
+Since Oct 2014, Nature journals wish to see code relating to papers.
+
+We are now working with Nature Neuroscience on how to check this.
+
+## Badges
+
+Kitemarking and Badges for papers/people.
+
+## Good practice
+
+I try to write my papers now in this format, so that I can bundle data
+and code with manuscript.
+
+Docker also makes it easy to test on fresh systems, and for others to
+test:
+
+    docker run -d -p 8787:8787 sje30/waverepo
+	open http://192.168.59.103:8787/
+
+## Live demo
+
+Anyone with docker installed on their laptop and want to try a live
+demo (apart from me?)
+
+Easiest way is with https://kitematic.com/
 
 
 ## Lessons learnt
@@ -153,10 +217,12 @@ More generally:
 - CARMEN project: (Evelyne Sernagor, Jennifer Simonotto, Mike Weeks, Mark
   Jessop, Tom Jackson) 
 
-- Applications: Catherine Cutts, Ellese Cotterill, Paul Charlesworth,
-  Seth Grant.
+- Waverepo data providers.
 
 - Malin Sandström (INCF).
+
+- Ben Marwick (Docker)
+
 - Wellcome Trust, EPSRC, BBSRC.
 
 
