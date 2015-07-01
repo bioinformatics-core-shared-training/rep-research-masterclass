@@ -139,9 +139,37 @@ Since Oct 2014, Nature journals wish to see code relating to papers.
 
 We are now working with Nature Neuroscience on how to check this.
 
-## Badges
 
-Kitemarking and Badges for papers/people.
+## Open badges: for papers | Open Science Foundation (OSF) badges for papers:
+
+<!--- <center><img src="osf-badges.jpg" height="300px" /></center> --->
+
+<center>
+[![OSF badges](figs/osf-badges1.png)](https://osf.io/tvyxz/wiki/home)
+</center>
+
+&nbsp;
+
+Started 2013 with reproducibility projects in Psychology and Cancer Biology.
+
+
+## OSF badge examples
+
+<center><img src="figs/osf_example.png" height="270px" /></center>
+
+&nbsp;
+
+From its [DOI](http://dx.doi.org/10.1177/0956797614547916) we get to 
+[OSF storage](https://osf.io/usfa5/?view_only=1f2e1994fc6247548499f47de64a2650).
+
+e.g. Badge earners in
+[Psychological Science](http://www.psychologicalscience.org/index.php/publications/journals/psychological_science/badge-earners).
+
+
+<!--- https://osf.io/tvyxz/wiki/home/  lists the badges;  "cortex" is also --->
+<!--- supposed to offer them, see comment in: --->
+<!--- http://blogs.biomedcentral.com/bmcblog/2014/10/07/why-we-need-badges-in-science/#disqus_thread --->
+<!--- and that page discusses the taxonomy of contributing. --->
 
 ## Good practice
 
