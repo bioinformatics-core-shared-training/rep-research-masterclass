@@ -32,6 +32,7 @@ scores <- read.table(sampleSheet,header=TRUE)
 dnames <- colnames(scores)
 head(scores)
 ```
+We've loaded the data, so now we can report that there are `r ncol(scores)` samples, with `r nrow(scores)` data points per sample.
 
 Now make some correlation scatter plots across the replicates:
 ```{r make_plots,cache=TRUE,dependson="load_data"}

@@ -92,6 +92,7 @@ head(scores)</code></pre>
 ## 4    113    122    214    171
 ## 5    835   1461   3232   2676
 ## 6   1375   2144   4283   3157</code></pre>
+<p>We’ve loaded the data, so now we can report that there are 4 samples, with 17473 data points per sample.</p>
 <p>Now make some correlation scatter plots across the replicates:</p>
 <pre class="r"><code>for (i in 2:ncol(scores)) {
   plot(scores[,1],scores[,i],xlab=dnames[1],ylab=dnames[i])
