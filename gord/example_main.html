@@ -70,7 +70,10 @@ img {
 
 <p>Initial Configuration Data:</p>
 <pre class="r"><code>sampleSheet &lt;- &quot;sample_siCt.txt&quot;
-plots_dir &lt;- &quot;generated/plots&quot;</code></pre>
+plots_dir &lt;- &quot;generated/plots&quot;
+if (!file.exists(plots_dir)) {
+  dir.create(plots_dir,recursive=TRUE)
+}</code></pre>
 <p>The following section sets up logging, so we can record whatever actions we take, print out variables, etc. For a long-running analysis, this can be used to report progress, or print critical values along the way if results are coming out strange.</p>
 <pre class="r"><code>library(logging)</code></pre>
 <pre><code>## Loading required package: methods</code></pre>
