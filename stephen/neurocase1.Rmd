@@ -1,0 +1,262 @@
+---
+title: "Patterns of spontaneous activity in developing networks"
+subtitle: "A case study for RR in Neuroscience"
+author: Stephen J Eglen
+date: 2015-07-08
+output:
+  ioslides_presentation
+---
+<style>
+h2 { 
+ color: #3399ff;		
+}
+h3 { 
+ color: #3399ff;		
+}
+</style>
+
+
+----
+
+<center><img src="figs/gigascience_cover.png" height="550px" /></center>
+
+<!-- TODO: list items not rendered. -->
+<div class="notes">
+Started with a project 
+European retina meeting 2007.
+I will show what we have built and then a couple of _applications_
+deriving immediately from it.
+This is my *note*.
+- It can contain markdown
+- like this list
+</div>
+
+## What are retinal waves?
+
+<center>
+<video id="sampleMovie1" src="./figs/p11ctrlconv.mov" loop="true" autoplay="true" controls></video>
+</center>
+
+
+## What did we do?
+
+
+- Requested retinal wave data from colleagues.
+
+- Beta 2 knockout mouse was a key focus.
+
+- Handled wide range of data formats.
+
+- Determined what meta data is crucial.
+
+- Converted to a common format . . .
+
+
+## What is HDF5? | Hierarchical data format, version 5
+
+- Scientific data format, useful across disciplines.
+- Adopted recently by Matlab.
+- All modern languages can read/write it.
+- Native compression
+
+- All meta data contained within the file.
+
+
+## HDF5 example
+
+<pre>
+h5ls -r ~/proj/carmen/waverepo/waverepo/hdf5/Wong1993/Wong1993_P0.h5
+/                        Group
+/array                   Dataset {1}
+/epos                    Dataset {2, 39}
+/meta                    Group
+/meta/age                Dataset {1}
+/meta/key                Dataset {1}
+/meta/species            Dataset {1}
+/names                   Dataset {39}
+/sCount                  Dataset {39}
+/spikes                  Dataset {13336}
+/summary                 Group
+/summary/N               Dataset {1}
+/summary/duration        Dataset {1}
+/summary/frate           Dataset {39}
+/summary/totalspikes     Dataset {1}
+</pre>
+
+
+## Datasets
+
+![Nelec against duration](figs/nelec-durn-fig-crop.svg)
+
+
+
+----
+
+<!-- ## Contents of "waverepo" |  (interactive)  -->
+
+<iframe src="http://damtp.cam.ac.uk/user/sje30/waverepo"></iframe>
+
+## Results
+
+Most tables and graphs in our report were automated and recomputed
+dynamically, e.g. every time the database extended.
+
+<iframe src="http://www.gigasciencejournal.com/content/3/1/3"></iframe>
+
+
+## Submitting the paper
+
+Provided all code and data online on our web page together with PDF.
+
+Cook for one month...
+
+## Reviews
+
+(Aside: reviews were signed and are now public).
+http://www.gigasciencejournal.com/content/3/1/3/prepub
+
+From: http://www.gigasciencejournal.com/manuscript/review/attachment/pdf/6813937211125312.pdf
+
+    I would use an ordinate log scale for this bottom right panel (as
+    done in Fig.  3). But since the authors gave me everything, I can
+    do it! by redefining fourplot as follows:
+
+
+## Post acceptance
+Journal were keen to see RR, so they wrote a press-release. Nature
+Neuroscience podcast a few weeks later.
+
+(Hint: contact http://www.communications.cam.ac.uk/)
+
+<iframe src="http://www.cam.ac.uk/research/news/from-mexican-wave-to-retinal-wave-why-sharing-data-is-good-for-science"></iframe>
+
+
+# What next
+
+## Journal policies are developing . . .
+
+Since Oct 2014, Nature journals wish to see code relating to papers.
+
+We are now working with Nature Neuroscience on how to check this.
+
+
+## Open badges: for papers | Open Science Foundation (OSF) badges for papers:
+
+<!--- <center><img src="osf-badges.jpg" height="300px" /></center> --->
+
+<center>
+[![OSF badges](figs/osf-badges1.png)](https://osf.io/tvyxz/wiki/home)
+</center>
+
+&nbsp;
+
+Started 2013 with reproducibility projects in Psychology and Cancer Biology.
+
+
+## OSF badge examples
+
+<center><img src="figs/osf_example.png" height="270px" /></center>
+
+&nbsp;
+
+From its [DOI](http://dx.doi.org/10.1177/0956797614547916) we get to 
+[OSF storage](https://osf.io/usfa5/?view_only=1f2e1994fc6247548499f47de64a2650).
+
+e.g. Badge earners in
+[Psychological Science](http://www.psychologicalscience.org/index.php/publications/journals/psychological_science/badge-earners).
+
+
+<!--- https://osf.io/tvyxz/wiki/home/  lists the badges;  "cortex" is also --->
+<!--- supposed to offer them, see comment in: --->
+<!--- http://blogs.biomedcentral.com/bmcblog/2014/10/07/why-we-need-badges-in-science/#disqus_thread --->
+<!--- and that page discusses the taxonomy of contributing. --->
+
+## Good practice
+
+I try to write my papers now in this format, so that I can bundle data
+and code with manuscript.
+
+Docker also makes it easy to test on fresh systems, and for others to
+test:
+
+    docker run -d -p 8787:8787 sje30/waverepo
+	open http://192.168.59.103:8787/
+
+Login with "rstudio" as username and password.  Open
+`waverepo/paper/waverepo_paper.Rnw` and hit the "Compile PDF" button.
+
+
+## Live demo
+
+Anyone with docker installed on their laptop and want to try a live
+demo (apart from me)?
+
+GUI available via https://kitematic.com/
+
+
+
+## Lessons learnt
+
+- People were willing to give away their *published* data.
+
+- Only one group could not find data to share.
+
+- Test sets for data important.  How do you know you've got it right?
+  
+- Data papers can be well-received.  Media attention.
+
+- Reproducible research takes a bit longer in the short-term, but
+  should benefit in long-term.
+
+- Designing *meta data* is hard.  This version was deliberately minimal
+  and lasted approximately two months.
+  
+
+## Reproducible research is everywhere ...
+
+... including these slides.  Made with markdown in R.  You can grab the
+source from
+
+https://github.com/bioinformatics-core-shared-training/rep-research-masterclass
+
+and regenerate them in R with:
+
+```
+Rscript -e 'rmarkdown::render("neurocase1.Rmd")'
+```
+or see the `Makefile` rule to regenerate.
+
+## Summary 
+
+- Building repositories allows for reproducible research.
+
+- Data papers are important and useful.
+
+- Embedding meta data in files is the future.
+
+
+More generally:
+
+- Share your data
+
+- Share your code
+
+- Share your papers [http://biorxiv.org](http://biorxiv.org)
+
+
+
+## Acknowledgements
+
+- CARMEN project: (Evelyne Sernagor, Jennifer Simonotto, Mike Weeks, Mark
+  Jessop, Tom Jackson) 
+
+- Waverepo data providers.
+
+- Malin Sandström (INCF).
+
+- Ben Marwick (Docker)
+
+- Wellcome Trust, EPSRC, BBSRC.
+
+
+<!-- TODO: problem when lines are not separated by blank line. -->
