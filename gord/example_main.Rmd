@@ -1,0 +1,60 @@
+---
+title: "Sample Analysis"
+author: "Gord Brown"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+Initial Configuration Data:
+```{r base_config,cache=TRUE}
+sampleSheet <- "sample_siCt.txt"
+plots_dir <- "generated/plots"
+```
+
+The following section sets up logging, so we can record whatever actions we
+take, print out variables, etc.  For a long-running analysis, this can be used
+to report progress, or print critical values along the way if results are
+coming out strange.
+```{r logging_config}
+library(logging)
+logFile <- "sample_logfile.txt"
+logger <- getLogger("sample_logger")
+logger$addHandler(writeToFile,file=logFile,level='DEBUG')
+logger$setLevel('DEBUG')
+```
+
+First load up the data, and print out the first few lines.
+```{r load_data,cache=TRUE,dependson="base_config"}
+scores <- read.table(sampleSheet,header=TRUE)
+dnames <- colnames(scores)
+head(scores)
+```
+
+Now make some correlation scatter plots across the replicates:
+```{r make_plots,cache=TRUE,dependson="load_data"}
+for (i in 2:ncol(scores)) {
+  plot(scores[,1],scores[,i],xlab=dnames[1],ylab=dnames[i])
+}
+```
+
+And a histogram:
+```{r plot_histogram,cache=TRUE,dependson="load_data"}
+hist(scores[,1],breaks=30,xlab=dnames[1],main="Peak Scores")
+```
+
+Generate some high quality plots in PDF format, for use in manuscripts:
+```{r make_quality_plots,cache=TRUE,dependson="load_data"}
+for (i in 2:ncol(scores)) {
+  filename <- file.path(plots_dir,sprintf("%s_%s_corr.pdf",dnames[1],dnames[i]))
+  logger$info(filename)
+  pdf(filename)
+  plot(scores[,1],scores[,i],xlab=dnames[1],ylab=dnames[i])
+  dev.off()
+}
+```
+
+Always useful to print out the session info at the end of the script, so you
+know what you were running at the time.
+```{r base_final}
+sessionInfo()
+```

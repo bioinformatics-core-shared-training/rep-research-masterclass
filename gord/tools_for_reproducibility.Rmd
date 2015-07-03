@@ -76,7 +76,7 @@ hist(siCt[,2],breaks=30)
 
 - Ease burden of coordination (if multiple people involved)
 
-- One **_true_** master copy of each user-manipulated file
+- **_One_** master copy of each user-edited file
 
 ## Revision Control tools: Git
 
@@ -151,3 +151,19 @@ other attached packages:
 [13] ggplot2_1.0.1           GenomicAlignments_1.4.1 Rsamtools_1.20.2       
 ...
 ```
+
+## Final Notes
+
+- Use available tools to lower the cost of reproducibility
+
+- Use >>> **_REVISION CONTROL_** <<< on all user-edited files
+
+- Strong Cambridge community support for R, related tools
+
+- Reproducible analysis workshop October 1
+
+- Contact: gordon.brown@cruk.cam.ac.uk for details
+
+- Slides available at:
+
+<center>https://github.com/bioinformatics-core-shared-training/rep-research-masterclass</center>
