@@ -9,6 +9,9 @@ Initial Configuration Data:
 ```{r base_config,cache=TRUE}
 sampleSheet <- "sample_siCt.txt"
 plots_dir <- "generated/plots"
+if (!file.exists(plots_dir)) {
+  dir.create(plots_dir,recursive=TRUE)
+}
 ```
 
 The following section sets up logging, so we can record whatever actions we
